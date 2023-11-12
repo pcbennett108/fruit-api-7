@@ -1,0 +1,17 @@
+<h2>Detailed fruit information for: <%= @facade.name %></h2>
+<ul class="fruit">
+  <li class="name"><strong>Name:</strong> <%= @facade.name %></li>
+  <li class="family"><strong>Family:</strong> <%= @facade.family %></li>
+  <li class="order"><strong>Order:</strong> <%= @facade.order %></li>
+  <li class="genus"><strong>Genus:</strong> <%= @facade.genus %></li>
+</ul>
+<h4>Nutrition Value Breakdown </h4>
+<ul>
+  <li class="calories">Calories: <%= @facade.calories %></li>
+  <li class="fat">Fat: <%= @facade.fat %></li>
+  <li class="sugar">Sugar: <%= @facade.sugar %></li>
+  <li class="carbohydrates">Carbohydrates: <%= @facade.carbohydrates %></li>
+  <li class="protein">Protein: <%= @facade.protein %></li>
+</ul>
+
+<%= link_to "Find Similar Fruits by Nutrition Value", fruits_nutritional_path(calories: @facade.calories, fruit: @facade.name) %>

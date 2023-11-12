@@ -1,0 +1,6 @@
+<h1>Fruits that have a similar nutritional value to <%= @similar_fruit %></h1>
+<% @facade.each do |fruit| %>
+  <div class="similar-fruit">
+    <p class="similar-fruit-name"><%= link_to fruit.name, fruits_path(search: fruit.name) %></p>
+  </div>
+<% end %>
